@@ -9,14 +9,13 @@ module.exports = {
   port: process.env.PORT || 8443,
   // Binding to 127.0.0.1 is safer in production.
   host: process.env.HOST || '0.0.0.0',
-  
-db: 'mongodb://dalin:111111@ds037215.mongolab.com:37215/meanjs',
- /* db: {
-    uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/mean',
+
+  db: {
+    uri: process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://dalin:111111@ds037215.mongolab.com:37215/meanjs',
     options: {
       user: '',
       pass: ''
-    }, */
+    },
     // Enable mongoose debug mode
     debug: process.env.MONGODB_DEBUG || false
   },
