@@ -2,20 +2,76 @@
   <div class="page-header">
     <h1>Articles</h1>
   </div>
-  <div class="list-group">
-    <a ng-repeat="article in articles" ui-sref="articles.view({articleId: article._id})" class="list-group-item">
-      <small class="list-group-item-text">
-        Posted on
-        <span ng-bind="article.created | date:'mediumDate'"></span>
-        by
-        <span ng-if="article.user" ng-bind="article.user.displayName"></span>
-        <span ng-if="!article.user">Deleted User</span>
-      </small>
-      <h4 class="list-group-item-heading" ng-bind="article.title"></h4>
-      <p class="list-group-item-text" ng-bind="article.content"></p>
+  <ol class="articles no-bullets">
+    <li ng-repeat="article in articles | orderBy: '-upvotes'">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+        <a ui-sref="articles.view({articleId: article._id})"><font size="5">{{article.title}}</font></a>
+
+        </div>
+        <div class="panel-body">
+          <pre><p class="list-group-item-text" ng-bind="article.content"></p></pre>
+        </div>
+
+        <div class="panel-footer">
+          <div class="row">
+            <div class="col-sm-4">
+              <button class="btn btn-primary" type="button" ng-click="incrementUpvotes(article)" ng-model="upvotes">
+                <i class="glyphicon glyphicon-thumbs-up"></i> <span class="badge">{{article.upvotes}}</span>
+              </button>
+              <button class="btn btn-success" type="button" ng-model="visit">
+                <i class="glyphicon glyphicon-eye-open"></i> <span class="badge">{{article.visit}}</span>
+              </button>
+            </div>
+            <div class="col-sm-8">
+              <font size="4">
+                <i class="pull-right">
+                  <small class="list-group-item-text">
+                    Posted on
+                    <span ng-bind="article.created | date:'mediumDate'"></span>
+                    by
+                    <span ng-if="article.user" ng-bind="article.user.displayName"></span>
+                    <span ng-if="!article.user">Deleted User</span>
+                  </small>
+                </i>
+              </font>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </a>
-  </div>
+    </li>
+  </ol>
+
   <div class="alert alert-warning text-center" ng-if="articles.$resolved && !articles.length">
     No articles yet, why don't you <a ui-sref="articles.create">create one</a>?
   </div>
+
+
+    <!-- MESSAGE PANEL -->
+  <div class="col-sm-6">
+      <div class="well well-sm well-subtle clearfix">
+          <h4 class="well-title"><b>Share This Page</b></h4>
+          <br />
+          <div class="row-sm-12 social-sharing text-center" style="margin-top: 25px;">
+              <div class="col-xs-3">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=" title="Share on Facebook" target="_blank" class="share-btn facebook"><i class="fa fa-facebook" style="color:#3b5998"></i></a>
+              </div>
+              <div class="col-xs-3">
+                  <a href="http://twitter.com/share?url=&text=" title="Share on Twitter" target="_blank"><i class="fa fa-twitter" style="color:#00aced"></i></a>
+              </div>
+              <div class="col-xs-3">
+                  <a href="mailto:?body=" title="Share by Email">
+                      <i class="fa fa-envelope" ></i>
+                  </a>
+              </div>
+              <div class="col-xs-3">
+                  <a href="http://www.addthis.com/bookmark.php?source=tbx32nj-1.0&amp;=300&amp;pubid=ra-4da371d82c643e7b&amp;url=" target="_blank" title="More share options" ><i class="fa fa-plus-square star-yellow"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+
 </section>

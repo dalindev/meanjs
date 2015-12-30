@@ -50,6 +50,25 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
       }
     };
 
+    $scope.incrementUpvotes = function(article) {
+      article.upvotes += 1;
+    };
+
+    $scope.incrementVisit = function(article) {
+      article.visit += 1;
+    };
+
+    $scope.addNewComment = function(article, commuser) {
+      if (article.addcomments !== ''){
+        var time = new Date().getTime();
+        var date = new Date(time);
+        article.addcomments = commuser+' says: '+article.addcomments;
+        article.addcomments += ' (DATE: '+date.toDateString()+')';
+        article.comments.push(article.addcomments);
+        $scope.article.addcomments = '';
+      }
+    };
+
     // Update existing Article
     $scope.update = function (isValid) {
       $scope.error = null;
