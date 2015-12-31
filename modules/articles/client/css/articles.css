@@ -155,7 +155,7 @@ textarea.expandable{
 pre {
     background: transparent; 
     border-style: none;
-    max-height: 200px;
+    max-height: 150px;
 }
 pre > p {
     font-family: Arial, Helvetica, sans-serif; 

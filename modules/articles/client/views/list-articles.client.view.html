@@ -7,7 +7,6 @@
       <div class="panel panel-info">
         <div class="panel-heading">
         <a ui-sref="articles.view({articleId: article._id})"><font size="5">{{article.title}}</font></a>
-
         </div>
         <div class="panel-body">
           <pre><p class="list-group-item-text" ng-bind="article.content"></p></pre>
@@ -19,7 +18,7 @@
               <button class="btn btn-primary" type="button" ng-click="incrementUpvotes(article)" ng-model="upvotes">
                 <i class="glyphicon glyphicon-thumbs-up"></i> <span class="badge">{{article.upvotes}}</span>
               </button>
-              <button class="btn btn-success" type="button" ng-model="visit">
+              <button class="btn btn-success" type="text" ng-model="visit">
                 <i class="glyphicon glyphicon-eye-open"></i> <span class="badge">{{article.visit}}</span>
               </button>
             </div>

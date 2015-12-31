@@ -45,4 +45,14 @@ var ArticleSchema = new Schema({
   }
 });
 
+/**
+ * Statics
+ */
+ArticleSchema.statics.load = function(id, cb) {
+  this.findOne({
+    _id: id
+  }).populate('user', 'name username').exec(cb);
+};
+
+
 mongoose.model('Article', ArticleSchema);
