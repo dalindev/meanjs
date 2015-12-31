@@ -33,6 +33,10 @@ var ArticleSchema = new Schema({
     type: Number,
     default: 0
   },
+  downvotes: {
+    type: Number,
+    default: 0
+  },
   comments: {
     type: Array,
   },
@@ -44,15 +48,5 @@ var ArticleSchema = new Schema({
     default: 0
   }
 });
-
-/**
- * Statics
- */
-ArticleSchema.statics.load = function(id, cb) {
-  this.findOne({
-    _id: id
-  }).populate('user', 'name username').exec(cb);
-};
-
 
 mongoose.model('Article', ArticleSchema);

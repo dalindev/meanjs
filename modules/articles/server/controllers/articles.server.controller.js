@@ -42,6 +42,7 @@ exports.update = function (req, res) {
   article.title = req.body.title;
   article.content = req.body.content;
   article.upvotes = req.body.upvotes;
+  article.downvotes = req.body.downvotes;
   article.visit = req.body.visit;
   article.comments = req.body.comments;
   article.addcomments = req.body.addcomments;

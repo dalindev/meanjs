@@ -100,7 +100,7 @@ ul.articles li:not(:last-child) {
     background:#f5f5f5;
 }
 .social-sharing > div > a > .fa{
-    font-size:36px;
+    font-size:32px;
     margin: 0 3px 0 3px;
 }
 
@@ -160,4 +160,23 @@ pre {
 pre > p {
     font-family: Arial, Helvetica, sans-serif; 
     font-size: 14px;
+}
+
+.hide-mobile{
+    display: inline;
+}
+.show-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: lightgreen;
+    }
+    .hide-mobile{
+        display: none;
+    }
+    .show-mobile{
+        display: inline;
+    }
 }

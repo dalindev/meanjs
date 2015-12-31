@@ -1,4 +1,5 @@
 <section ng-controller="ArticlesController" ng-init="findOne()">
+<div class="row">
 <form name="articleForm" class="form-horizontal col-md-12" role="form" ng-submit="update(articleForm.$valid)" novalidate>
 <br /><br />
   <div class="panel panel-info">
@@ -19,32 +20,53 @@
 
       <div class="panel-footer">
         <div class="row">
-          <div class="col-sm-4">
-            <button class="btn btn-primary" type="submit" ng-click="incrementUpvotes(article)" value="Update" ng-model="upvotes">
-              <i class="fa fa-heart fa-lg"></i> <span class="badge">{{article.upvotes}}</span>
-            </button>
-            <button class="btn btn-success" type="submit" ng-click="incrementVisit(article)" ng-model="visit">
-              <i class="fa fa-eye fa-lg"></i> <span class="badge">{{article.visit}}</span>
-            </button>
-            <button class="btn btn-warning" type="submit">
-              <i class="fa fa-comments fa-lg"></i> <span class="badge">{{article.comments.length}}</span>
-            </button>
+          <div class="col-xs-12 col-sm-7 pull-left">
+            <div class="row-sm-12">
+                <button class="btn btn-primary" type="submit" ng-click="incrementUpvotes(article)" value="Update" ng-model="upvotes">
+                  <i class="fa fa-thumbs-o-up fa-lg"></i> <span class="badge">{{article.upvotes}}</span>
+                </button>
+                <button class="btn btn-danger" type="submit" ng-click="incrementDownvotes(article)" ng-model="downvotes">
+                  <i class="fa fa-thumbs-o-down fa-lg"></i> <span class="badge">{{article.downvotes}}</span>
+                </button>
+                <button class="btn btn-success" type="submit" ng-click="incrementVisit(article)" ng-model="visit">
+                  <i class="fa fa-eye fa-lg"></i> <span class="badge">{{article.visit}}</span>
+                </button>
+                <button class="btn btn-warning" type="submit">
+                  <i class="fa fa-comments fa-lg"></i> <span class="badge">{{article.comments.length}}</span>
+                </button>
+            </div>
           </div>
-          <div class="col-sm-8">
-            <font size="4">
-              <i class="pull-right">
-                Posted on
-                <span ng-bind="article.created | date:'mediumDate'"></span>
-                by
-                <span ng-if="article.user" ng-bind="article.user.displayName"></span>
-                <span ng-if="!article.user">Deleted User</span>
-              </i>
-            </font>
+          <div class="col-xs-12 col-sm-5 pull-right">
+            <div class="row-sm-12 social-sharing text-center hide-mobile">
+                <div class="col-xs-3">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=" title="Share on Facebook" target="_blank" class="share-btn facebook"><i class="fa fa-facebook" style="color:#3b5998"></i></a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="http://twitter.com/share?url=&text=" title="Share on Twitter" target="_blank"><i class="fa fa-twitter" style="color:#00aced"></i></a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="mailto:?body=" title="Share by Email">
+                        <i class="fa fa-envelope" ></i>
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="http://www.addthis.com/bookmark.php?source=tbx32nj-1.0&amp;=300&amp;pubid=ra-4da371d82c643e7b&amp;url=" target="_blank" title="More share options" ><i class="fa fa-plus-square star-yellow"></i></a>
+                </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <font size="3">
+    <i class="pull-right">
+      Posted on
+      <span ng-bind="article.created | date:'mediumDate'"></span>
+      by
+      <span ng-if="article.user" ng-bind="article.user.displayName"></span>
+      <span ng-if="!article.user">Deleted User</span>
+    </i>
+  </font>
 
     <div class="row-sm-12" ng-controller="HeaderController as hdrctr">
     <h4>{{article.comments.length}} Comments</h4>
@@ -59,11 +81,34 @@
         </div>
         <br />
       </div>
-      <div class="col-md-2">
-        <button mean-token="'edit-submit'" type="submit" class="btn btn-primary btn-lg" ng-click="addNewComment(article, authentication.user.displayName)" >Post Comments</button>
+      <div class="col-md-3">
+        <button style="width:100%;" mean-token="'edit-submit'" type="submit" class="btn btn-primary btn-lg" ng-click="addNewComment(article, authentication.user.displayName)" >Post Comments</button>
       </div>
     </div>
   </div>
-
   </form>
+</div>
+  <!-- MESSAGE PANEL -->
+<div class="row show-mobile">
+  <div class="well well-sm well-subtle clearfix">
+      <h4 class="well-title"><b>Share This Page</b></h4>
+      <br />
+      <div class="row-sm-12 social-sharing text-center" style="margin-top: 25px;">
+          <div class="col-xs-3">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=" title="Share on Facebook" target="_blank" class="share-btn facebook"><i class="fa fa-facebook" style="color:#3b5998"></i></a>
+          </div>
+          <div class="col-xs-3">
+              <a href="http://twitter.com/share?url=&text=" title="Share on Twitter" target="_blank"><i class="fa fa-twitter" style="color:#00aced"></i></a>
+          </div>
+          <div class="col-xs-3">
+              <a href="mailto:?body=" title="Share by Email">
+                  <i class="fa fa-envelope" ></i>
+              </a>
+          </div>
+          <div class="col-xs-3">
+              <a href="http://www.addthis.com/bookmark.php?source=tbx32nj-1.0&amp;=300&amp;pubid=ra-4da371d82c643e7b&amp;url=" target="_blank" title="More share options" ><i class="fa fa-plus-square star-yellow"></i></a>
+          </div>
+      </div>
+    </div>
+  </div>
 </section>

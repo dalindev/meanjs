@@ -58,6 +58,10 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
       article.visit += 1;
     };
 
+    $scope.incrementDownvotes = function(article) {
+      article.downvotes += 1;
+    };
+
     $scope.addNewComment = function(article, commuser) {
       if (article.addcomments !== ''){
         var time = new Date().getTime();
