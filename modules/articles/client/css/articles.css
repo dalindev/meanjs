@@ -6,7 +6,6 @@ ul.articles li:not(:last-child) {
 }
 .content {
 	margin-top: 50px;
-    background-color: black;
 }
 .undecorated-link:hover {
 	text-decoration: none;

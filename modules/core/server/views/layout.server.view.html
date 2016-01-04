@@ -41,7 +41,7 @@
 
 <body class="ng-cloak">
   <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
-  <section class="content">
+  <section class="content twinkling">
     <section class="container">
       {% block content %}{% endblock %}
     </section>
@@ -62,6 +62,57 @@
   <!--Livereload script rendered -->
   <script type="text/javascript" src="{{host}}:35729/livereload.js"></script>
   {% endif %}
+
+
+<!-- moving black hole -->
+<!--
+<script type="text/javascript">
+$(document).ready(function(){
+    animateDiv();
+    
+});
+
+function makeNewPosition(){
+    
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $(window).height() - 256;
+    var w = $(window).width() - 256;
+    
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+    
+    return [nh,nw];    
+    
+}
+
+function animateDiv(){
+    var newq = makeNewPosition();
+    var oldq = $('.blackhole').offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+    
+    $('.blackhole').animate({ top: newq[0], left: newq[1] }, speed, function(){
+      animateDiv();        
+    });
+    
+};
+
+function calcSpeed(prev, next) {
+    
+    var x = Math.abs(prev[1] - next[1]);
+    var y = Math.abs(prev[0] - next[0]);
+    
+    var greatest = x > y ? x : y;
+    
+    var speedModifier = 0.02;
+
+    var speed = Math.ceil(greatest/speedModifier);
+
+    return speed;
+
+}
+</script> -->
+<!-- moving black hole -->
+
 </body>
 
 </html>
