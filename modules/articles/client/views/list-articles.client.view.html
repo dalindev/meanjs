@@ -1,4 +1,4 @@
-<section ng-controller="ArticlesController" ng-init="find()">
+<section ng-controller="ArticlesController" ng-init="find()" style="margin: 0; padding: 0;">
   <div class="page-header">
     <h1>Articles</h1>
   </div>
@@ -6,28 +6,28 @@
     <li ng-repeat="article in articles | orderBy: '-upvotes'">
       <div class="panel panel-info">
         <div class="panel-heading">
-        <a ui-sref="articles.view({articleId: article._id})"><font size="5">{{article.title}}</font></a>
+        <a ui-sref="articles.view({articleId: article._id})"><font size="4">{{article.title}}</font></a>
         </div>
         <div class="panel-body">
           <pre><p class="list-group-item-text" ng-bind="article.content"></p></pre>
-        <div class="panel-footer">
+        <div class="panel-footer hide-xxs">
           <div class="row">
             <div class="col-md-6">
-              <button class="btn btn-primary" type="button" ng-click="incrementUpvotes(article)" ng-model="upvotes">
+              <button class="myButton" type="button" ng-click="incrementUpvotes(article)" ng-model="upvotes">
                 <i class="glyphicon glyphicon-thumbs-up"></i> <span class="badge">{{article.upvotes}}</span>
               </button>
-              <button class="btn btn-danger" type="submit" ng-click="incrementDownvotes(article)" ng-model="downvotes">
-                  <i class="fa fa-thumbs-o-down fa-lg"></i> <span class="badge">{{article.downvotes}}</span>
-                </button>
-              <button class="btn btn-success" type="text" ng-model="visit">
+              <button class="myButton" type="submit" ng-click="incrementDownvotes(article)" ng-model="downvotes">
+                <i class="fa fa-thumbs-o-down fa-lg"></i> <span class="badge">{{article.downvotes}}</span>
+              </button>
+              <button class="myButton" type="text" ng-model="visit">
                 <i class="glyphicon glyphicon-eye-open"></i> <span class="badge">{{article.visit}}</span>
               </button>
-            <button class="btn btn-warning" type="submit">
-              <i class="fa fa-comments fa-lg"></i> <span class="badge">{{article.comments.length}}</span>
-            </button>
+              <button class="myButton" type="submit">
+                <i class="fa fa-comments fa-lg"></i> <span class="badge">{{article.comments.length}}</span>
+              </button>
             </div>
             <div class="col-md-6 hide-mobile">
-              <font size="4">
+              <font size="3">
                 <i class="pull-right">
                   <small class="list-group-item-text">
                     Posted on
@@ -41,6 +41,18 @@
             </div>
           </div>
         </div>
+        <!-- show at small mobile -->
+        <div>
+            <div class="col-xs-12 show-xxs">
+                <button class="myButton" type="submit" ng-click="incrementUpvotes(article)" value="Update" ng-model="upvotes">
+                  <i class="fa fa-thumbs-o-up fa-lg"></i> <span class="badge">{{article.upvotes}}</span>
+                </button>
+                <button class="myButton" type="submit" ng-click="incrementDownvotes(article)" ng-model="downvotes">
+                  <i class="fa fa-thumbs-o-down fa-lg"></i> <span class="badge">{{article.downvotes}}</span>
+                </button>
+            </div>
+        </div>
+        <!-- show at small mobile -->
       </div>
 
     </a>

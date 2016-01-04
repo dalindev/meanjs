@@ -1,11 +1,11 @@
 <section ng-controller="ArticlesController" ng-init="findOne()">
-<div class="row">
-<form name="articleForm" class="form-horizontal col-md-12" role="form" ng-submit="update(articleForm.$valid)" novalidate>
+<div class="row-xs-12 clearfix">
+<form name="articleForm" class="form-horizontal" role="form" ng-submit="update(articleForm.$valid)" novalidate>
 <br /><br />
-  <div class="panel panel-info">
-    <div class="panel-heading" style="text-align: center;">
-      <font size="5"><b> {{article.title}}</b></font>
-      <span class="pull-right" ng-show="authentication.user._id == article.user._id">
+  <div class="panel panel-info clearfix">
+    <div class="panel-heading clearfix" style="text-align: center;">
+      <h3><b> {{article.title}}</b></h3>
+      <span ng-show="authentication.user._id == article.user._id">
         <a class="btn btn-primary" ui-sref="articles.edit({articleId: article._id})">
           <i class="glyphicon glyphicon-edit"></i>
         </a>
@@ -13,28 +13,26 @@
           <i class="glyphicon glyphicon-trash"></i>
         </a>
       </span>
-  </div>
-<div class="panel-body">
-
-    <pre style="max-height: none;"><p class="list-group-item-text" ng-bind="article.content"></p></pre>
-
-      <div class="panel-footer">
+    </div>
+    <div class="panel-body clearfix">
+      <div class="row">
+        <pre style="max-height: none;"><p class="list-group-item-text" ng-bind="article.content"></p></pre>
+      </div>
+      <div class="panel-footer hide-xxs">
         <div class="row">
           <div class="col-xs-12 col-sm-7 pull-left">
-            <div class="row-sm-12">
-                <button class="btn btn-primary" type="submit" ng-click="incrementUpvotes(article)" value="Update" ng-model="upvotes">
-                  <i class="fa fa-thumbs-o-up fa-lg"></i> <span class="badge">{{article.upvotes}}</span>
-                </button>
-                <button class="btn btn-danger" type="submit" ng-click="incrementDownvotes(article)" ng-model="downvotes">
-                  <i class="fa fa-thumbs-o-down fa-lg"></i> <span class="badge">{{article.downvotes}}</span>
-                </button>
-                <button class="btn btn-success" type="submit" ng-click="incrementVisit(article)" ng-model="visit">
-                  <i class="fa fa-eye fa-lg"></i> <span class="badge">{{article.visit}}</span>
-                </button>
-                <button class="btn btn-warning" type="submit">
-                  <i class="fa fa-comments fa-lg"></i> <span class="badge">{{article.comments.length}}</span>
-                </button>
-            </div>
+              <button class="myButton" type="submit" ng-click="incrementUpvotes(article)" value="Update" ng-model="upvotes">
+                <i class="fa fa-thumbs-o-up fa-lg"></i> <span class="badge">{{article.upvotes}}</span>
+              </button>
+              <button class="myButton" type="submit" ng-click="incrementDownvotes(article)" ng-model="downvotes">
+                <i class="fa fa-thumbs-o-down fa-lg"></i> <span class="badge">{{article.downvotes}}</span>
+              </button>
+              <button class="myButton" type="submit" ng-click="incrementVisit(article)" ng-model="visit">
+                <i class="fa fa-eye fa-lg"></i> <span class="badge">{{article.visit}}</span>
+              </button>
+              <button class="myButton" type="submit">
+                <i class="fa fa-comments fa-lg"></i> <span class="badge">{{article.comments.length}}</span>
+              </button>
           </div>
           <div class="col-xs-12 col-sm-5 pull-right">
             <div class="row-sm-12 social-sharing text-center hide-mobile">
@@ -56,20 +54,48 @@
           </div>
         </div>
       </div>
+      <!-- show at small mobile -->
+      <div>
+          <div class="col-xs-12 show-xxs">
+            <div class="col-xs-3">
+              <button class="myButton" type="submit" ng-click="incrementUpvotes(article)" value="Update" ng-model="upvotes">
+                <i class="fa fa-thumbs-o-up fa-lg"></i> <span class="badge">{{article.upvotes}}</span>
+              </button>
+            </div>
+            <div class="col-xs-3">
+              <button class="myButton" type="submit" ng-click="incrementDownvotes(article)" ng-model="downvotes">
+                <i class="fa fa-thumbs-o-down fa-lg"></i> <span class="badge">{{article.downvotes}}</span>
+              </button>
+            </div>
+            <div class="col-xs-3">
+              <button class="myButton" type="submit" ng-click="incrementVisit(article)" ng-model="visit">
+                <i class="fa fa-eye fa-lg"></i> <span class="badge">{{article.visit}}</span>
+              </button>
+            </div>
+            <div class="col-xs-3">
+              <button class="myButton" type="submit">
+                <i class="fa fa-comments fa-lg"></i> <span class="badge">{{article.comments.length}}</span>
+              </button>
+            </div>
+          </div>
+      </div>
+    <!-- show at small mobile -->
     </div>
   </div>
-  <font size="3">
-    <i class="pull-right">
-      Posted on
-      <span ng-bind="article.created | date:'mediumDate'"></span>
-      by
-      <span ng-if="article.user" ng-bind="article.user.displayName"></span>
-      <span ng-if="!article.user">Deleted User</span>
-    </i>
-  </font>
-
-    <div class="row-sm-12" ng-controller="HeaderController as hdrctr">
-    <h4>{{article.comments.length}} Comments</h4>
+  <div class="row-sm-12">
+    <font size="2" color="white">
+      <i class="pull-right">
+        Posted on
+        <span ng-bind="article.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="article.user" ng-bind="article.user.displayName"></span>
+        <span ng-if="!article.user">Deleted User</span>
+      </i>
+    </font>
+  </div>
+  <br />
+  <div class="row-sm-12" ng-controller="HeaderController as hdrctr">
+    <h4><font color="white"><i>{{article.comments.length}} Comments</i></font></h4>
     <ul class="list-group">
       <div ng-repeat="comments in article.comments track by $index"><li class="list-group-item list-group-item-warning" style="word-wrap: break-word">{{comments}}</li></div>
     </ul>
@@ -82,7 +108,7 @@
         <br />
       </div>
       <div class="col-md-3">
-        <button style="width:100%;" mean-token="'edit-submit'" type="submit" class="btn btn-primary btn-lg" ng-click="addNewComment(article, authentication.user.displayName)" >Post Comments</button>
+        <button style="width:100%;" mean-token="'edit-submit'" type="submit" class="btn btn-warning btn-lg" ng-click="addNewComment(article, authentication.user.displayName)" >Post Comments</button>
       </div>
     </div>
   </div>
