@@ -112,15 +112,25 @@ header a, a:visited {
   display:block;
 }
 
+/*
 body{
       background:#000 url(../img/stars.png) repeat top center;
       z-index:-3;
+}*/
+
+body{ 
+  background:#000 url(../img/stars.png) repeat center center fixed; 
+  z-index:-3;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .twinkling{
-  background:transparent url(../img/twinkling.png) repeat top center;
+  background:transparent url(../img/twinkling.png) repeat center center;
   z-index:-2;
-
+  overflow:auto;
   -moz-animation:move-twink-back 200s linear infinite;
   -ms-animation:move-twink-back 200s linear infinite;
   -o-animation:move-twink-back 200s linear infinite;
@@ -175,4 +185,3 @@ position:fixed;
     }
 }
 /* custom background */
-
