@@ -178,9 +178,6 @@ pre > p {
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        background-color: lightgreen;
-    }
     .panel{
         border:none;
     }
