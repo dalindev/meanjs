@@ -44,7 +44,7 @@ angular.module('core')
 }]);
 
 
-window.onresize = function(){ location.reload(); }
+window.onresize = function(){ location.reload(); };
 //stars background
 window.onload = function() {
     setTimeout(start, 200);
