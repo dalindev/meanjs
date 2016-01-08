@@ -115,11 +115,9 @@ function start() {
         stars = [],
         shootingStars = [],
         layers = [
-        	{ speed: 0.015, scale: 0.05, count: 500 },
-            { speed: 0.03, scale: 0.015, count: 100 },
-            { speed: 0.05, scale: 0.5, count: 50 },
-            { speed: 0.08, scale: 0.75, count: 30 },
-            { speed: 0.10, scale: 1.25, count: 3 }
+            { speed: 0.015, scale: 0.2, count: 320 },
+            { speed: 0.03, scale: 0.5, count: 50 },
+            { speed: 0.05, scale: 0.75, count: 30 }
         ],
         starsAngle = 145,
         shootingStarSpeed = {
@@ -168,7 +166,7 @@ function start() {
     function update() {
         if (!paused) {
             context.clearRect(0, 0, width, height);
-            context.fillStyle = "#282a3a";
+            context.fillStyle = "#20212d";
             context.fillRect(0, 0, width, height);
             context.fill();
 
