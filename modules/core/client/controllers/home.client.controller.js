@@ -44,7 +44,17 @@ angular.module('core')
 }]);
 
 
-window.onresize = function(){ location.reload(); };
+//window.onresize = function(){ location.reload(); };
+
+var width = $(window).width();
+window.resize(function(){
+   if($(this).width() != width){
+      width = $(this).width();
+       console.log(width);
+   }
+})
+
+
 //stars background
 window.onload = function() {
     setTimeout(start, 200);
