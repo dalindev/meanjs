@@ -32,6 +32,10 @@ angular.module('core')
       $interval.cancel(timeoutId);
     });
 
+	screen.bind('orientationchange', function () {
+	    location.reload();
+	});
+
     // start the UI update process; save the timeoutId for canceling
     timeoutId = $interval(function() {
       updateTime(); // update DOM
@@ -42,7 +46,6 @@ angular.module('core')
     link: link
   };
 }]);
-
 
 //window.onresize = function(){ location.reload(); };
 
