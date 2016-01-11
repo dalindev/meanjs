@@ -32,10 +32,6 @@ angular.module('core')
       $interval.cancel(timeoutId);
     });
 
-	screen.bind('orientationchange', function () {
-	    location.reload();
-	});
-
     // start the UI update process; save the timeoutId for canceling
     timeoutId = $interval(function() {
       updateTime(); // update DOM
@@ -137,6 +133,14 @@ function start() {
         starBaseRadius = 2,
         shootingStarRadius = 3,
         paused = false;
+
+        //change oritation
+        window.onresize = function(){
+        	if(width != window.innerWidth){
+			    location.reload();
+			return;
+		    }
+		};
 
     //Create all stars
     for (var j = 0; j < layers.length; j += 1) {
@@ -290,7 +294,7 @@ function start() {
     };
 
     window.onblur = function () {
-      paused = true;
+      paused = false;
     };
 
 }
