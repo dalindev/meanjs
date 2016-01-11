@@ -224,7 +224,7 @@ function start() {
     }
 
     function drawStar(star) {
-        context.fillStyle = "rgb(255, 221, 157)";
+        context.fillStyle = "rgb(125, 249, 255)";
         context.beginPath();
         context.arc(star.x, star.y, star.radius, 0, Math.PI * 2, false);
         context.fill();
