@@ -58,7 +58,11 @@ ul.articles li:not(:last-child) {
     -moz-border-radius: 7px;
     border-radius: 7px;
 }
-
+.panel-heading{
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
 
 .well{
     background:white;
@@ -257,3 +261,10 @@ pre > p {
     background-color: #77b55a;
 }
 
+
+/* ng-animate */
+  li {
+            transition-duration: 1.5s, 1.5s;
+            transition-property: top;
+        }
+/* ng-animate */

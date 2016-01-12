@@ -134,14 +134,16 @@ function start() {
         shootingStarRadius = 3,
         paused = false;
 
+        /*
         //change oritation
         window.onresize = function(){
-        	if(width != window.innerWidth){
-			    location.reload();
+        	if(width !== window.innerWidth){
+			location.reload();
 			return;
-		    }
+			}
 		};
-
+		*/
+		
     //Create all stars
     for (var j = 0; j < layers.length; j += 1) {
         var layer = layers[j];
@@ -175,7 +177,7 @@ function start() {
     function update() {
         if (!paused) {
             context.clearRect(0, 0, width, height);
-            context.fillStyle = "#15161e";
+            context.fillStyle = '#15161e';
             context.fillRect(0, 0, width, height);
             context.fill();
 

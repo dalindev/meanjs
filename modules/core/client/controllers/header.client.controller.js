@@ -13,10 +13,6 @@ angular.module('core').controller('HeaderController', ['$scope', '$state', 'Auth
     $scope.isCollapsed = false;
     $scope.toggleCollapsibleMenu = function () {
       $scope.isCollapsed = !$scope.isCollapsed;
-      if(!$scope.isCollapsed){
-          alert("Successfully Inserted");
-        };
-
     };
 
     // Collapsing the menu after navigation

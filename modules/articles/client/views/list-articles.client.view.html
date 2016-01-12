@@ -14,45 +14,43 @@
           <div class="row">
             <div class="col-md-6">
               <button class="myButton" type="button" ng-click="incrementUpvotes(article)" ng-model="upvotes">
-                <i class="glyphicon glyphicon-thumbs-up"></i> <span class="badge">{{article.upvotes}}</span>
+                <i class="fa fa-thumbs-o-up fa-lg"></i> <span class="badge">{{article.upvotes}}</span>
               </button>
-              <button class="myButton" type="submit" ng-click="incrementDownvotes(article)" ng-model="downvotes">
+              <button class="myButton" type="button" ng-click="incrementDownvotes(article)" ng-model="downvotes">
                 <i class="fa fa-thumbs-o-down fa-lg"></i> <span class="badge">{{article.downvotes}}</span>
               </button>
-              <button class="myButton" type="text" ng-model="visit">
-                <i class="glyphicon glyphicon-eye-open"></i> <span class="badge">{{article.visit}}</span>
+              <button class="myButton" type="button" ng-model="visit">
+                <i class="fa fa-eye fa-lg"></i> <span class="badge">{{article.visit}}</span>
               </button>
-              <button class="myButton" type="submit">
+              <button class="myButton" type="button">
                 <i class="fa fa-comments fa-lg"></i> <span class="badge">{{article.comments.length}}</span>
               </button>
-            </div>
-            <div class="col-md-6 hide-mobile">
-              <font size="3">
-                <i class="pull-right">
-                  <small class="list-group-item-text">
-                    Posted on
-                    <span ng-bind="article.created | date:'mediumDate'"></span>
-                    by
-                    <span ng-if="article.user" ng-bind="article.user.displayName"></span>
-                    <span ng-if="!article.user">Deleted User</span>
-                  </small>
-                </i>
-              </font>
             </div>
           </div>
         </div>
         <!-- show at small mobile -->
         <div>
             <div class="col-xs-12 show-xxs">
-                <button class="myButton" type="submit" ng-click="incrementUpvotes(article)" value="Update" ng-model="upvotes">
+                <button class="myButton" type="button" ng-click="incrementUpvotes(article)" value="Update" ng-model="upvotes">
                   <i class="fa fa-thumbs-o-up fa-lg"></i> <span class="badge">{{article.upvotes}}</span>
                 </button>
-                <button class="myButton" type="submit" ng-click="incrementDownvotes(article)" ng-model="downvotes">
+                <button class="myButton" type="button" ng-click="incrementDownvotes(article)" ng-model="downvotes">
                   <i class="fa fa-thumbs-o-down fa-lg"></i> <span class="badge">{{article.downvotes}}</span>
                 </button>
             </div>
         </div>
         <!-- show at small mobile -->
+        <font size="3">
+          <i class="pull-right">
+            <small class="list-group-item-text">
+              Posted on
+              <span ng-bind="article.created | date:'mediumDate'"></span>
+              by
+              <span ng-if="article.user" ng-bind="article.user.displayName"></span>
+              <span ng-if="!article.user">Deleted User</span>
+            </small>
+          </i>
+        </font>
       </div>
 
     </a>

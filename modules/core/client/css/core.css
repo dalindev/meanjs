@@ -99,35 +99,35 @@ body{
 /* custom menu icon */
 .nav-icon {
   margin: 0 auto;
-  padding: 3px 10px 2px 10px;
-  width: 60px;
+  padding: 8px 5px 5px 5px;
+  width: 50px;
   cursor: pointer;
 }
 .nav-icon div, .nav-icon:after, .nav-icon:before {
   content: "";
   background: #FFF;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  height: 5px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  height: 4px;
   display: block;
-  margin: 7px 0;
+  margin: 5px 3px;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 .nav-icon:hover:before {
-  -moz-transform: translateY(12px) rotate(135deg);
-  -ms-transform: translateY(12px) rotate(135deg);
-  -webkit-transform: translateY(12px) rotate(135deg);
-  transform: translateY(12px) rotate(135deg);
+  -moz-transform: translateY(9px) rotate(135deg);
+  -ms-transform: translateY(9px) rotate(135deg);
+  -webkit-transform: translateY(9px) rotate(135deg);
+  transform: translateY(9px) rotate(135deg);
 }
 .nav-icon:hover:after {
-  -moz-transform: translateY(-12px) rotate(-135deg);
-  -ms-transform: translateY(-12px) rotate(-135deg);
-  -webkit-transform: translateY(-12px) rotate(-135deg);
-  transform: translateY(-12px) rotate(-135deg);
+  -moz-transform: translateY(-9px) rotate(-135deg);
+  -ms-transform: translateY(-9px) rotate(-135deg);
+  -webkit-transform: translateY(-9px) rotate(-135deg);
+  transform: translateY(-9px) rotate(-135deg);
 }
 .nav-icon:hover div {
   -moz-transform: scale(0);
@@ -136,3 +136,4 @@ body{
   transform: scale(0);
 }
 /* custom menu icon */
+

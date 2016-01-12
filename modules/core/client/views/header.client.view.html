@@ -5,7 +5,7 @@
       <div>
       </div>
     </div>
-    <a ui-sref="home" class="navbar-brand">home</a>
+    <a ui-sref="home" class="navbar-brand"><i class="fa fa-home fa-lg"></i></a>
   </div>
   <nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
     <ul class="nav navbar-nav" ng-if="menu.shouldRender(authentication.user);">
@@ -21,11 +21,11 @@
     </ul>
     <ul class="nav navbar-nav navbar-right" ng-hide="authentication.user">
       <li ui-sref-active="active">
-        <a ui-sref="authentication.signup">Sign Up</a>
+        <a ui-sref="authentication.signup"><i class="fa fa-user-plus fa-lg"></i> Sign Up</a>
       </li>
       <li class="divider-vertical"></li>
       <li ui-sref-active="active">
-        <a ui-sref="authentication.signin">Sign In</a>
+        <a ui-sref="authentication.signin"><i class="fa fa-sign-in fa-lg"></i> Sign In</a>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right" ng-show="authentication.user">
@@ -36,20 +36,20 @@
         </a>
         <ul class="dropdown-menu" role="menu">
           <li ui-sref-active="active">
-            <a ui-sref="settings.profile">Edit Profile</a>
+            <a ui-sref="settings.profile"><i class="fa fa-pencil-square-o fa-lg"></i> Edit Profile</a>
           </li>
           <li ui-sref-active="active">
-            <a ui-sref="settings.picture">Change Profile Picture</a>
+            <a ui-sref="settings.picture"><i class="fa fa-user fa-lg"></i> Change Profile Picture</a>
           </li>
           <li ui-sref-active="active" ng-show="authentication.user.provider === 'local'">
-            <a ui-sref="settings.password">Change Password</a>
+            <a ui-sref="settings.password"><i class="fa fa-asterisk fa-lg"></i> Change Password</a>
           </li>
           <li ui-sref-active="active">
-            <a ui-sref="settings.accounts">Manage Social Accounts</a>
+            <a ui-sref="settings.accounts"><i class="fa fa-facebook-square fa-lg"></i> Manage Social Accounts</a>
           </li>
           <li class="divider"></li>
           <li>
-            <a href="/api/auth/signout" target="_self">Signout</a>
+            <a href="/api/auth/signout" target="_self"><i class="fa fa-sign-out fa-lg"></i> Signout</a>
           </li>
         </ul>
       </li>

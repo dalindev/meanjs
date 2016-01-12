@@ -53,7 +53,7 @@ exports.isAllowed = function (req, res, next) {
     return next();
   }
 
-  if(req.article && req.user && req.article.user && req.article.user.id && (req.article.addcomments !== "undefined" && req.article.addcomments !== "null")){
+  if(req.article && req.user && req.article.user && req.article.user.id && (req.article.addcomments !== 'undefined' && req.article.addcomments !== 'null')){
     return next();
   }
 
