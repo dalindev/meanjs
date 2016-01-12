@@ -248,23 +248,24 @@ pre > p {
     background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a',GradientType=0);
     background-color:#72b352;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .myButton:active {
     position:relative;
     top:1px;
 }
 
-
-
 .badge {
     color:white;
     background-color: #77b55a;
 }
 
+.badge:hover {
+    color:red;
+    background-color: #77b55a;
+}
 
 /* ng-animate */
-  li {
-            transition-duration: 1.5s, 1.5s;
-            transition-property: top;
-        }
 /* ng-animate */
+
+
