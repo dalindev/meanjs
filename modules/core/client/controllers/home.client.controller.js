@@ -44,6 +44,10 @@ angular.module('core')
 }]);
 
 //window.onresize = function(){ location.reload(); };
+window.onorientationchange = function()
+{
+   window.location.reload();
+};
 
 //stars background
 window.onload = function() {
