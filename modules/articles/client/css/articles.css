@@ -249,6 +249,7 @@ pre > p {
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a',GradientType=0);
     background-color:#72b352;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    transition: 0.5s;
 }
 .myButton:active {
     position:relative;
@@ -258,6 +259,11 @@ pre > p {
 .badge {
     color:white;
     background-color: #77b55a;
+}
+.badge:hover {
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    transition: 0.5s;
 }
 
 /* ng-animate */
