@@ -15,7 +15,6 @@ canvas {
 nav ul li a:hover {
   overflow: hidden;
   -webkit-transform: translate(3px,-2px);
-  -o-transition: translate(3px,-2px);
   -moz-transform: translate(3px,-2px);
   transition: 0.2s;
 }
@@ -231,16 +230,16 @@ body{
 
 /* grid */
 
+/* nav */
+.fa-home{
+  color: white;
+}
 
-  .fa-home{
-    color: white;
-  }
-
-  .fa-home:hover{
+.fa-home:hover{
   -webkit-transform: rotateY(360deg);
   -moz-transform: rotateY(360deg);
   transition: 1s;
-  }
+}
 
 @media screen and (max-width: 768px) {
 
@@ -261,4 +260,4 @@ body{
     overflow: hidden;
   }
 }
-
+/* nav */
