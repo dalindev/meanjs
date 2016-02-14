@@ -33,7 +33,7 @@ module.exports = {
     }
   },
   app: {
-    title: defaultEnvConfig.app.title + ' - Development Environment'
+    title: defaultEnvConfig.app.title + ' - Dalin - DEMO'
   },
   facebook: {
     clientID: process.env.FACEBOOK_ID || 'APP_ID',
