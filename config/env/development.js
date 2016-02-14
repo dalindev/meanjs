@@ -36,8 +36,8 @@ module.exports = {
     title: defaultEnvConfig.app.title + ' - Dalin - DEMO'
   },
   facebook: {
-    clientID: process.env.FACEBOOK_ID || 'APP_ID',
-    clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',
+    clientID: process.env.FACEBOOK_ID || '214274262256883',
+    clientSecret: process.env.FACEBOOK_SECRET || 'c998ac5646620eba2347135f0d0ef6f6',
     callbackURL: '/api/auth/facebook/callback'
   },
   twitter: {
