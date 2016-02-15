@@ -292,7 +292,7 @@ a:active {
 }
 @media (max-width: 1000px) {
   .profile {
-    background-color:rgba(0, 0, 0, 0.7);
+    background-color:rgba(0, 0, 0, 0.3);
     width: 100%;
   }
 }
@@ -474,7 +474,7 @@ a:active {
 }
 
 .experience .experience-project {
-  color: white;
+  color: orange;
   margin-bottom: 5px;
 }
 
@@ -565,7 +565,7 @@ a:active {
           animation: skill_4 2.0s ease;
 }
 .section-wrapper .skill-percentage:nth-child(5)::before {
-  width: 70%;
+  width: 80%;
   -webkit-animation: skill_5 2.0s ease;
           animation: skill_5 2.0s ease;
 }
@@ -659,7 +659,7 @@ a:active {
     width: 0%;
   }
   to {
-    width: 70%;
+    width: 80%;
   }
 }
 @keyframes skill_5 {
@@ -667,7 +667,7 @@ a:active {
     width: 0%;
   }
   to {
-    width: 70%;
+    width: 80%;
   }
 }
 @-webkit-keyframes skill_6 {
