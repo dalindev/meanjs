@@ -6,7 +6,7 @@
     <li ng-repeat="article in articles | orderBy: '-upvotes'">
       <div class="panel panel-info">
         <div class="panel-heading">
-        <a ui-sref="articles.view({articleId: article._id})"><font size="4">{{article.title}}</font></a>
+        <a class="articles-title" ui-sref="articles.view({articleId: article._id})">{{article.title}}</a>
         </div>
         <div class="panel-body">
           <pre style="overflow:hidden"><p class="list-group-item-text" ng-bind="article.content"></p></pre>
