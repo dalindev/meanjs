@@ -33,7 +33,7 @@ module.exports = {
     }
   },
   app: {
-    title: defaultEnvConfig.app.title + ' - Dalin - DEMO'
+    title: defaultEnvConfig.app.title + ' - Dalin Huang'
   },
   facebook: {
     clientID: process.env.FACEBOOK_ID || '214274262256883',
