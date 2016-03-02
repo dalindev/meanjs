@@ -585,9 +585,14 @@ a:active {
           animation: skill_8 2.0s ease;
 }
 .section-wrapper .skill-percentage:nth-child(9)::before {
-  width: 100%;
+  width: 90%;
   -webkit-animation: skill_9 2.0s ease;
           animation: skill_9 2.0s ease;
+}
+.section-wrapper .skill-percentage:nth-child(10)::before {
+  width: 100%;
+  -webkit-animation: skill_10 2.0s ease;
+          animation: skill_10 2.0s ease;
 }
 
 @-webkit-keyframes skill_1 {
@@ -723,7 +728,7 @@ a:active {
     width: 0%;
   }
   to {
-    width: 100%;
+    width: 90%;
   }
 }
 @keyframes skill_9 {
@@ -731,10 +736,25 @@ a:active {
     width: 0%;
   }
   to {
+    width: 90%;
+  }
+}
+@-webkit-keyframes skill_10 {
+  from {
+    width: 0%;
+  }
+  to {
     width: 100%;
   }
 }
-
+@keyframes skill_10 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 
 
 /* social button */
