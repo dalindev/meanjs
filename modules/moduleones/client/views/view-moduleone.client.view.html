@@ -1,0 +1,26 @@
+<section>
+  <div class="page-header">
+    <h1 data-ng-bind="vm.moduleone.name"></h1>
+  </div>
+  <div class="pull-right"
+       data-ng-show="vm.moduleone.isCurrentUserOwner">
+    <a class="btn btn-primary"
+       data-ui-sref="moduleones.edit({ moduleoneId: vm.moduleone._id })">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn btn-primary" data-ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <small>
+    <em class="text-muted">
+      Posted on
+      <span data-ng-bind="vm.moduleone.created | date:'mediumDate'"></span>
+      by
+      <span data-ng-if="vm.moduleone.user"
+            data-ng-bind="vm.moduleone.user.displayName"></span>
+      <span data-ng-if="!vm.moduleone.user">Deleted User</span>
+    </em>
+  </small>
+  <p class="lead" data-ng-bind="vm.moduleone.content"></p>
+</section>
