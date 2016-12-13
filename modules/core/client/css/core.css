@@ -545,7 +545,7 @@ a:active {
   border-radius:3px;
 }
 .section-wrapper .skill-percentage:nth-child(1)::before {
-  width: 90%;
+  width: 95%;
   -webkit-animation: skill_1 2.0s ease;
           animation: skill_1 2.0s ease;
 }
@@ -555,7 +555,7 @@ a:active {
           animation: skill_2 2.0s ease;
 }
 .section-wrapper .skill-percentage:nth-child(3)::before {
-  width: 85%;
+  width: 75%;
   -webkit-animation: skill_3 2.0s ease;
           animation: skill_3 2.0s ease;
 }
@@ -565,12 +565,12 @@ a:active {
           animation: skill_4 2.0s ease;
 }
 .section-wrapper .skill-percentage:nth-child(5)::before {
-  width: 80%;
+  width: 95%;
   -webkit-animation: skill_5 2.0s ease;
           animation: skill_5 2.0s ease;
 }
 .section-wrapper .skill-percentage:nth-child(6)::before {
-  width: 85%;
+  width: 80%;
   -webkit-animation: skill_6 2.0s ease;
           animation: skill_6 2.0s ease;
 }
@@ -580,12 +580,12 @@ a:active {
           animation: skill_7 2.0s ease;
 }
 .section-wrapper .skill-percentage:nth-child(8)::before {
-  width: 55%;
+  width: 80%;
   -webkit-animation: skill_8 2.0s ease;
           animation: skill_8 2.0s ease;
 }
 .section-wrapper .skill-percentage:nth-child(9)::before {
-  width: 90%;
+  width: 95%;
   -webkit-animation: skill_9 2.0s ease;
           animation: skill_9 2.0s ease;
 }
