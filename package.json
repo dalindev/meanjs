@@ -11,8 +11,7 @@
     "url": "https://github.com/hdl881127/meanjs/"
   },
   "engines": {
-    "node": "^0.12.0",
-    "npm": "^2.0.0"
+    "node": "~0.12.0"
   },
   "scripts": {
     "start": "grunt",
@@ -59,7 +58,7 @@
     "passport-local": "^1.0.0",
     "passport-paypal-openidconnect": "^0.1.1",
     "passport-twitter": "^1.0.2",
-    "phantomjs-prebuilt": "~1.9.0",
+    "phantomjs-prebuilt": "^1.9.0",
     "serve-favicon": "^2.3.0",
     "socket.io": "^1.3.7",
     "swig": "^1.4.2",
