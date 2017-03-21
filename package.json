@@ -11,7 +11,7 @@
     "url": "https://github.com/hdl881127/meanjs/"
   },
   "engines": {
-    "node": "~0.12.0"
+    "node": "^6.0.0"
   },
   "scripts": {
     "start": "grunt",
