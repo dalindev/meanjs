@@ -300,7 +300,7 @@ function start() {
     };
 
     window.onblur = function () {
-      paused = false;
+      paused = true;
     };
 
 }
