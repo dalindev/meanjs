@@ -545,17 +545,17 @@ a:active {
   border-radius:3px;
 }
 .section-wrapper .skill-percentage:nth-child(1)::before {
-  width: 95%;
+  width: 97%;
   -webkit-animation: skill_1 2.0s ease;
           animation: skill_1 2.0s ease;
 }
 .section-wrapper .skill-percentage:nth-child(2)::before {
-  width: 95%;
+  width: 97%;
   -webkit-animation: skill_2 2.0s ease;
           animation: skill_2 2.0s ease;
 }
 .section-wrapper .skill-percentage:nth-child(3)::before {
-  width: 75%;
+  width: 90%;
   -webkit-animation: skill_3 2.0s ease;
           animation: skill_3 2.0s ease;
 }
@@ -565,7 +565,7 @@ a:active {
           animation: skill_4 2.0s ease;
 }
 .section-wrapper .skill-percentage:nth-child(5)::before {
-  width: 95%;
+  width: 97%;
   -webkit-animation: skill_5 2.0s ease;
           animation: skill_5 2.0s ease;
 }
@@ -575,7 +575,7 @@ a:active {
           animation: skill_6 2.0s ease;
 }
 .section-wrapper .skill-percentage:nth-child(7)::before {
-  width: 65%;
+  width: 88%;
   -webkit-animation: skill_7 2.0s ease;
           animation: skill_7 2.0s ease;
 }
@@ -600,7 +600,7 @@ a:active {
     width: 0%;
   }
   to {
-    width: 95%;
+    width: 97%;
   }
 }
 @keyframes skill_1 {
@@ -608,7 +608,7 @@ a:active {
     width: 0%;
   }
   to {
-    width: 95%;
+    width: 97%;
   }
 }
 @-webkit-keyframes skill_2 {
@@ -616,7 +616,7 @@ a:active {
     width: 0%;
   }
   to {
-    width: 95%;
+    width: 97%;
   }
 }
 @keyframes skill_2 {
@@ -624,7 +624,7 @@ a:active {
     width: 0%;
   }
   to {
-    width: 95%;
+    width: 97%;
   }
 }
 @-webkit-keyframes skill_3 {
@@ -632,7 +632,7 @@ a:active {
     width: 0%;
   }
   to {
-    width: 75%;
+    width: 90%;
   }
 }
 @keyframes skill_3 {
@@ -640,7 +640,7 @@ a:active {
     width: 0%;
   }
   to {
-    width: 75%;
+    width: 90%;
   }
 }
 @-webkit-keyframes skill_4 {
@@ -664,7 +664,7 @@ a:active {
     width: 0%;
   }
   to {
-    width: 95%;
+    width: 97%;
   }
 }
 @keyframes skill_5 {
@@ -672,7 +672,7 @@ a:active {
     width: 0%;
   }
   to {
-    width: 95%;
+    width: 97%;
   }
 }
 @-webkit-keyframes skill_6 {
@@ -696,7 +696,7 @@ a:active {
     width: 0%;
   }
   to {
-    width: 65%;
+    width: 88%;
   }
 }
 @keyframes skill_7 {
@@ -704,7 +704,7 @@ a:active {
     width: 0%;
   }
   to {
-    width: 65%;
+    width: 88%;
   }
 }
 @-webkit-keyframes skill_8 {
